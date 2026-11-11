@@ -19,7 +19,7 @@ public class CubeInteract : Interactive
     {
        if (rotating)
         {
-          transform.Rotate(new Vector3(4,0,0));  
+          transform.Rotate(new Vector3(1,1,-1)*Time.deltaTime*100);  
         } 
     }
 }
