@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class Interactor : Interactive
+public class CubeInteract : Interactive
 {
+    bool rotating = false;
     public new void Interact()
     {
-        
+        rotating = !rotating;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,6 +17,9 @@ public class Interactor : Interactive
     // Update is called once per frame
     void Update()
     {
-        
+       if (rotating)
+        {
+          transform.Rotate(new Vector3(4,0,0));  
+        } 
     }
 }
